@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.16.2.176:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/
   instance:
     prefer-ip-address: true
       
@@ -15,12 +15,12 @@ spring:
     application:
       name: dubbo-wallet
     registry: 
-      address: zookeeper://172.16.2.176:2181
+      address: zookeeper://peer1:2181
     protocol: 
       name: dubbo
       port: 20880
     scan: com.example.demo
   zipkin:
-    base-url: http://172.16.2.176:9411
+    base-url: http://peer1:9411
     
     
